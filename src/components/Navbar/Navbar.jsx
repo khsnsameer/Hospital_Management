@@ -14,7 +14,7 @@ const Navbar = ({setshowLogin}) => {
           <a href='#Footer' onClick={()=>setunderline("contact-us")} className={underline==="contact-us"?"active":""}>Contact us</a>
         </ul>
           <div className="Navbar-right">
-          <button onClick={()=>setshowLogin(true)}>sign in</button>
+          <button onClick={()=>setshowLogin(true)}>sign out</button>
         </div>
        </div>
      )
