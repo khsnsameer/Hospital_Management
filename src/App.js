@@ -2,8 +2,8 @@ import {React,useState} from 'react';
 import Navbar from './components/Navbar/Navbar';
 import { Route ,Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Cart from './pages/Cart/Cart';
-import PlaceAppointment from './pages/PlaceAppointment/PlaceAppointment';
+// import Cart from './pages/Cart/Cart';
+import BookAppointment from './pages/BookAppointment/BookAppointment';
 import Footer from './components/Footer/Footer';
 import './App.css';
 import LoginPopup from './components/LoginPopup/LoginPopup';
@@ -17,8 +17,8 @@ const App = () => {
         <Navbar setshowLogin={setshowLogin} />
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/Cart" element={<Cart/>}/>
-          <Route path="/PlaceAppointment" element={<PlaceAppointment/>}/>
+          {/* <Route path="/Cart" element={<Cart/>}/> */}
+          <Route path="/BookAppointment" element={<BookAppointment/>}/>
         </Routes>
       </div>
       <Footer/>
