@@ -3,7 +3,7 @@ import './LoginPopup.css';
 
 const LoginPopup = ({setshowLogin}) => {
   const [currState, setcurrState] = useState("Login");
-
+   
   return (
     <div className="LoginPopup">
       <form className="LoginPopup-Container">
