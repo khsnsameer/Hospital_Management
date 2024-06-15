@@ -2,7 +2,7 @@ import React from 'react';
 import './ExploreMenu.css';
 import { specialization_list } from '../../Assets/Assets';
 
-const ExploreMenu = ({ Category, setCategory }) => {
+const ExploreMenu = ({ category, setcategory }) => {
     return (
         <div className="explore-specialist" id="explore-specialist">
             <h1>Explore our Specialists</h1>
@@ -13,11 +13,11 @@ const ExploreMenu = ({ Category, setCategory }) => {
                 {specialization_list.map((item, index) => {
                     return (
                         <div
-                            onClick={() => setCategory(prev => prev === item.specialist_name ? "ALL" : item.specialist_name)}
+                            onClick={() => setcategory(prev => prev === item.specialist_name ? "ALL" : item.specialist_name)}
                             key={index}
                             className='explore-specialist-list-item'
                         >
-                            <img className={Category === item.specialist_name ? "active" : ""} src={item.specialist_image} alt={item.specialist_name} />
+                            <img className={category === item.specialist_name ? "active" : ""} src={item.specialist_image} alt={item.specialist_name} />
                             <p>{item.specialist_name}</p>
                         </div>
                     );

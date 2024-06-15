@@ -35,7 +35,7 @@
 }
 
 .Header-contents button{
-    border:node;
+    border:none;
     color:#747474;
     font-weight: 500;
     padding: 1vw 2.3vw;

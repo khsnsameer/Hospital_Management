@@ -1,4 +1,5 @@
 import logo from './logo.jpg'
+import sameer from './Sameer.png'
 import google_play_store from "./Google_Play_Store.webp"
 import Linked_in from './Linked_in.png'
 import Facebook from './Facebook.png'
@@ -24,7 +25,17 @@ export const Assets = {
     google_play_store,
     Appstore
 }
-
+const category=[
+    "Urologist",
+    "Cardiologist",
+    "Neurologist",
+    "Dermatologist",
+    "Pediatrician",
+    "Orthopedist",
+    "Psychiatrist",
+    "Pulmonologist",
+    "Ophthalmologist"
+];
 export const specialization_list = [
     {
         specialist_name: "Urologist",
@@ -63,3 +74,16 @@ export const specialization_list = [
         specialist_image: Cardiologist
     },
 ]
+const specialist_name="Sameer";
+const specialist_image=sameer;
+const  specialization_people=[];
+category.forEach(category =>{
+    for(let i=0;i<6;i++){
+        specialization_people.push({
+            specialist_name,
+            specialist_image,
+            specialist_category:category
+        });
+    }
+});
+export default specialization_people;

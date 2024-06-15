@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 const Header = () => {
     return(
       <div className="Header">
@@ -7,7 +8,7 @@ const Header = () => {
             <h2 >We care</h2>
             <h2>about your health</h2>
             <p>Good health is the state if mental ,physical and social well being and it does not just mean absence of disease</p>
-            <button>Make an Appointment</button>
+            <Link to={"/BookAppointment"}><button>Book an Appointment</button></Link>
         </div>  
       </div>
     )
