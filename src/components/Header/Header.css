@@ -36,7 +36,7 @@
 
 .Header-contents button{
     border:none;
-    color:#747474;
+    color:black;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
@@ -63,3 +63,29 @@
         padding: 2vw 4vw;
     }
 }
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+  }
+  
+  .btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+    box-shadow: 0 20px 30px -6px rgba(238, 103, 97, 0.5);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+  
+  .btn:active {
+    opacity: 0.5;
+  }

@@ -1,29 +1,29 @@
-import {React,useState} from 'react';
+import React, { useState } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import { Route ,Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
-// import Cart from './pages/Cart/Cart';
 import BookAppointment from './pages/BookAppointment/BookAppointment';
 import Footer from './components/Footer/Footer';
-import './App.css';
 import LoginPopup from './components/LoginPopup/LoginPopup';
-// import Logintype from './components/LoginPopup/Logintype';
+import './App.css';
+
 const App = () => {
-  const [showLogin,setshowLogin]=useState(false);
+  const [showLogin, setshowLogin] = useState(false);
+  const location = useLocation();
+
   return (
     <>
-    {showLogin?<LoginPopup setshowLogin={setshowLogin}/>:<></>}
+      {showLogin && <LoginPopup setshowLogin={setshowLogin} />}
       <div className="app">
         <Navbar setshowLogin={setshowLogin} />
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          {/* <Route path="/Cart" element={<Cart/>}/> */}
-          <Route path="/BookAppointment" element={<BookAppointment/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/BookAppointment" element={<BookAppointment />} />
         </Routes>
       </div>
-      <Footer/>
-      </>
-    )
+      {location.pathname !== '/BookAppointment' && <Footer />}
+    </>
+  );
 }
- 
+
 export default App;
